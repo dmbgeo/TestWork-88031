@@ -1,0 +1,119 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TestWork 88031 API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "operationId": "index",
+                "responses": {
+                    "200": {
+                        "description": "Display user noutes."
+                    }
+                }
+            }
+        },
+        "/notes/add": {
+            "get": {
+                "operationId": "add",
+                "responses": {
+                    "200": {
+                        "description": "front page add note."
+                    }
+                }
+            },
+            "put": {
+                "operationId": "addPut",
+                "responses": {
+                    "200": {
+                        "description": "add note."
+                    }
+                }
+            }
+        },
+        "/notes/update/{id}": {
+            "get": {
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "note id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "front page update note."
+                    }
+                }
+            },
+            "post": {
+                "operationId": "updatePost",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "note id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update note."
+                    }
+                }
+            }
+        },
+        "/notes/delete/{id}": {
+            "delete": {
+                "operationId": "delete",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "note id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "delete note."
+                    }
+                }
+            }
+        },
+        "/notes/detail/{id}": {
+            "get": {
+                "operationId": "detail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "note id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "detail page note."
+                    }
+                }
+            }
+        }
+    }
+}
