@@ -70,6 +70,24 @@ class NotesController extends Controller
      *     path="/notes/add",
      *     @OA\Response(response="200", description="add note."),
      *     operationId = "addPut",
+     *     @OA\Parameter ( 
+     *          name = "name", 
+     *          description = "note title", 
+     *          required = true, 
+     *          in = "path", 
+     *          @OA\Schema ( 
+     *              type ="string" 
+     *          )
+     *     ),
+     *     @OA\Parameter ( 
+     *          name = "text", 
+     *          description = "note text", 
+     *          required = true, 
+     *          in = "path", 
+     *          @OA\Schema ( 
+     *              type ="text" 
+     *          )
+     *     )
      * )
      */
 
@@ -127,7 +145,26 @@ class NotesController extends Controller
      *          @OA\Schema ( 
      *              type ="integer" 
      *          )
-     *     )  
+     *     ),
+     *     @OA\Parameter ( 
+     *          name = "name", 
+     *          description = "note title", 
+     *          required = true, 
+     *          in = "path", 
+     *          @OA\Schema ( 
+     *              type ="string" 
+     *          )
+     *     ),
+     *     @OA\Parameter ( 
+     *          name = "text", 
+     *          description = "note text", 
+     *          required = true, 
+     *          in = "path", 
+     *          @OA\Schema ( 
+     *              type ="text" 
+     *          )
+     *     )
+     * 
      * )
      */
     public function updatePost(Request $request, $id)

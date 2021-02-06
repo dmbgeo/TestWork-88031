@@ -26,6 +26,26 @@
             },
             "put": {
                 "operationId": "addPut",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "note title",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "in": "path",
+                        "description": "note text",
+                        "required": true,
+                        "schema": {
+                            "type": "text"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "add note."
@@ -63,6 +83,24 @@
                         "required": true,
                         "schema": {
                             "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "note title",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "in": "path",
+                        "description": "note text",
+                        "required": true,
+                        "schema": {
+                            "type": "text"
                         }
                     }
                 ],
